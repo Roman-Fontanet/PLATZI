@@ -1,0 +1,13 @@
+div{
+    background-color: lightsalmon;
+    width: 150px;
+    height: 100px;
+    transform-origin: left top;
+}
+
+
+/* rotar un elemento-----se usan grados con deg */
+div:hover{
+    transform: rotate(20deg);
+    transition: 1s;
+}

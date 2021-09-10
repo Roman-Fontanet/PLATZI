@@ -1,0 +1,34 @@
+/* link no visto */
+a:link {
+    color: hotpink;
+}
+
+/* link visitado */
+a:visited{
+    color: tomato;
+}
+
+/* poner mouse arriba */
+a:hover{
+    background-color: palegoldenrod;
+}
+
+/* todo menos la clase que definimos */
+p:not(.maravillas){
+    color: lightsalmon;
+}
+
+/* solo el primer hijo */
+.container div:nth-child(1){
+    color: lightseagreen;
+}
+
+/* mientras se hace click */
+p:active{
+    color: blue;
+}
+
+/* mientras se interactua con el elemento */
+.maravillas:focus{
+    color: darkviolet;
+}

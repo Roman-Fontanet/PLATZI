@@ -1,0 +1,118 @@
+body {
+    margin: 0;
+    font-family: 'Muli', sans-serif;
+}
+.header {
+    align-items: center;
+    background-color: #21c08b;
+    color: white;
+    display: flex;
+    height: 100px;
+    justify-content: space-between;
+    top: 0px;
+    width: 100%;
+}
+.header__img {
+    width: 130px;
+    margin-left: 10px;
+}
+
+.registro {
+    background: linear-gradient(#21C08B, #AB88FF);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0px 30px;
+    min-height: calc(100vh - 200px);
+}
+
+.registro__container{
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 2px solid white;
+    border-radius: 40px;
+    color: white;
+    padding: 60px 68px 40px;
+    min-height: 700px;
+    width: 300px;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+}
+
+.registro__container--form{
+    display: flex;
+    flex-direction: column;
+}
+
+.registro__container--form label{
+    font-size: 14px;
+}
+
+.registro__container--inicio-sesion > div> a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    margin-bottom: 10px;
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+}
+
+.registro__container--inicio-sesion > div> a:hover{
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.input{
+    background-color: transparent;
+    border-left: 0;
+    border-top: 0;
+    border-right: 0;
+    border-bottom: 2px solid white;
+    font-family: 'Muli', sans-serif;
+    font-size: 16px;
+    margin-bottom: 20px;
+    padding: 0 20px;
+    outline: none;
+    height: 50px;
+}
+
+::placeholder{
+    color: white;
+}
+
+.button{
+    background-color: rgba(255, 255, 255, 0.1);
+    border: none;
+    border-radius: 25px;
+    color: white;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    font-family: 'Muli', sans-serif;
+    height: 50px;
+    letter-spacing: 1px;
+    margin: 10px 0;
+}
+
+.footer{
+    background-color: #AB88FF;
+    display: flex;
+    align-items: center;
+    height: 100px;
+    width: 100%;
+}
+
+.footer a{
+    color: white;
+    cursor: pointer;
+    font-size: 14px;
+    padding-left: 20px;
+    text-decoration: none;
+}
+
+.footer a:hover{
+    text-decoration: underline;
+}

@@ -1,0 +1,439 @@
+:root {
+--lightblue: #CCEFFF;
+--green: #6a9f67;
+--lightbrown: #ba6d4f;
+--darkbrown: #a2533d;
+--shadow: 0 18px 36px rgba(0,0,0, 0.3), 0 12px 15px rgba(0,0,0, 0.22);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    display: grid;
+    width: 100%;
+    height: 100vh;
+    margin: 0;
+    place-items: center;
+    background: orange;
+    counter-reset: score;
+}
+
+.phone {
+    position: relative;
+    width: 300px;
+    height: 600px;
+    border: 8px solid black;
+    border-radius: 40px;
+    background: var(--lightblue);
+    box-shadow: var(--shadow);
+    overflow: hidden;
+}
+
+.layer {
+    position: absolute;
+}
+
+input[type=checkbox] {
+    position: relative;
+    appearance: none;
+    cursor: pointer;
+    width: 100%;
+    height: 80px;
+    margin: 0;
+    top: 0;
+    z-index: 2;
+}
+
+input:checked {
+    counter-increment: score;
+}
+
+.layer-1 {
+    z-index: 1;
+    width: 80px;
+    height: 520px;
+    bottom: 0;
+    left: 60px;
+    animation-duration: 1s;
+    /*animation-play-state: paused;*/
+}
+
+.layer-1, .layer-2,
+.layer-4, .layer-6 {
+    animation-name: rabbit;
+    animation-iteration-count:infinite;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: backwards
+
+}
+
+.layer-1 input[type=checkbox],
+.layer-2 input[type=checkbox],
+.layer-4 input[type=checkbox],
+.layer-6 input[type=checkbox] {
+    animation-name: select-rabbit;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+}
+
+.layer-1 input[type=checkbox] {
+    animation-duration: 1s;
+}
+
+.layer-2 {
+    z-index: 2;
+    width: 80px;
+    height: 520px;
+    bottom: 0;
+    right: 60px;
+    animation-duration: 1.5s;
+
+}
+
+.layer-2 input[type=checkbox] {
+    animation-duration: 1.5s;
+}
+
+
+.layer-3 {
+    z-index: 3;
+    border-radius: 40px;
+    background: var(--lightbrown);
+    box-shadow: var(--shadow);
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: 0 auto;
+    width: 240px;
+    height: 460px;
+}
+
+.layer-4 {
+    z-index: 4;
+    width: 80px;
+    height: 380px;
+    bottom: 0;
+    left: 15px;
+    animation-duration: 0.8s;
+}
+
+.layer-4 input[type=checkbox] {
+    animation-duration: 0.8s;
+}
+
+.layer-5 {
+    z-index: 5;
+    width: 220px;
+    height: 320px;
+    bottom: 0;
+    left: 0;
+    border-radius: 40px;
+    background: var(--lightbrown);
+    box-shadow: var(--shadow);
+}
+
+.layer-6 {
+    z-index: 6;
+    width: 80px;
+    height: 260px;
+    bottom: 0;
+    right: 15px;
+    animation-duration: 2s;
+}
+
+.layer-6 input[type=checkbox] {
+    animation-duration: 2s;
+}
+
+.layer-6 input:checked {
+    animation-play-state: paused;
+}
+
+.layer-7 {
+    z-index: 7;
+    width: 180px;
+    height: 200px;
+    bottom: 0;
+    right: 0;
+    border-radius: 40px;
+    background: var(--lightbrown);
+    box-shadow: var(--shadow);
+}
+
+.layer-8 {
+    z-index: 8;
+    background: var(--green);
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    bottom: 0;
+    width: 100px;
+    height: 130px;
+    border-radius: 50% 50% 0 0;
+}
+
+.layer-9 {
+    z-index: 9;
+    left: 0;
+    bottom: 0;
+    background: white;
+    width: 90px;
+    height: 90px;
+    border-radius: 50% 50% 0 0;
+}
+
+.layer-10 {
+    z-index: 10;
+    right: 0;
+    bottom: 0;
+    background: white;
+    width: 90px;
+    height: 90px;
+    border-radius: 50% 50% 0 0;
+}
+
+.ear {
+    position: absolute;
+    background: white;
+    width: 25px;
+    height: 50px;
+    border-radius: 50%;
+    top: 5px;
+    animation-name: move-ear;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-delay: .2s;
+}
+
+.left-ear {
+    left: 12px;
+}
+
+.right-ear {
+    right: 12px;
+}
+
+.ear::after {
+    position: absolute;
+    content: '';
+    background: pink;
+    width: 12px;
+    height: 50px;
+    border-radius: 90%;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    top: 8px;
+}
+
+.head {
+    position: absolute;
+    background: white;
+    width: 90%;
+    height: 80px;
+    border-radius: 50%;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    top: 35px;
+}
+
+.head::before {
+    position: absolute;
+    content: '';
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    background: darkgray;
+    top: 15px;
+    left: 25px;
+    animation-name: blink;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+
+.head::after {
+    position: absolute;
+    content: '';
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    background: darkgray;
+    top: 15px;
+    right: 25px;
+    animation-name: blink;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes blink {
+    0% {
+    height: 4px;
+    }
+    5% {
+    height: 1px;
+    transform: translateY(2px);
+    }
+    10% {
+    height: 4px;
+    transform: translateY(0);
+
+    }
+}
+
+.land {
+    height:50px;
+    background: var(--darkbrown);
+    border-radius: 10px;
+}
+
+.land:before {
+    position: absolute;
+    content: '';
+    top: 0;
+    width: 100%;
+    height:10px;
+    border-radius: 40px 40px 0 0;
+    background: var(--green);
+}
+
+.land::after {
+    position:absolute;
+    content: '';
+    width:100%;
+    height: 40px;
+    top: 10px;
+    background: 
+    linear-gradient(135deg, var(--green) 25%, transparent 25%) -50px 0,
+    linear-gradient(-135deg, var(--green) 25%, transparent 25%) -50px 0,
+    linear-gradient(45deg, var(--lightbrown) 25%, transparent 25%),
+    linear-gradient(-45deg, var(--lightbrown) 25%, transparent 25%);
+    background-size: 34px 40px;
+}
+
+.layer-8:before {
+    content: '';
+    position: absolute;
+    background: var(--green);
+    border-radius: 50%;
+    width: 80px;
+    height: 100px;
+    left: -50px;
+    top: 30px;
+}
+
+.layer-8:after {
+    content: '';
+    position: absolute;
+    background: var(--green);
+    border-radius: 50%;
+    width: 80px;
+    height: 100px;
+    right: -50px;
+    top: 25px;
+}
+
+.layer-9::after {
+    position: absolute;
+    content: '';
+    background: white;
+    border-radius: 50%;
+    width: 70px;
+    height: 65px;
+    bottom: -10px;
+    right: -45px;
+}
+
+.layer-10::before {
+    position: absolute;
+    content: '';
+    background: white;
+    border-radius: 50%;
+    width: 70px;
+    height: 65px;
+    bottom: -10px;
+    left: -45px;
+}
+
+.title {
+    display:grid;
+    place-items: center;
+    margin: 10px 0 0px;
+}
+
+.title img {
+    width:150px;
+}
+
+.score {
+    margin: 0;
+    text-align:center;
+    color: var(--lightbrown);
+    font-family: Arial;
+}
+
+.score::after {
+    content: counter(score);
+}
+
+@keyframes rabbit {
+    0% {
+    bottom: 0;
+    }
+    25% {
+    bottom: -80px;
+    }
+    100% {
+    bottom: 0;
+    }
+}
+
+@keyframes select-rabbit {
+    0% {
+    top: 0;
+    }
+    25% {
+    top: 80px;
+    }
+    100% {
+    top: 0;
+    }
+}
+
+@keyframes move-ear {
+    0% {
+    }
+    5% {
+    transform: rotate(-5deg);
+    }
+    10% {
+    transform: rotate(0);
+    }
+    15% {
+    transform: rotate(5deg);
+    }
+    20% {
+    transform: rotate(0);
+    }
+    25% {
+    transform: rotate(-5deg);
+    }
+    30% {
+    transform: rotate(0);
+    }
+    35% {
+    transform: rotate(5deg);
+    }
+    40% {
+    transform: rotate(0);
+    }
+    45% {
+    transform: rotate(-5deg);
+    }
+    50% {
+    transform: rotate(0);
+    }
+}
+

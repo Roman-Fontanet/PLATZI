@@ -1,0 +1,21 @@
+/* ADYACENTE */
+/* h2 + p {
+    color: red;
+} */
+
+
+/* ETIQUETAS A LA MISMA LINEA */
+/* h2 ~ p {
+    color: red;
+} */
+
+
+/* HIJO */
+/* div > p {
+    color: red;
+} */
+
+/* DESCENDIENTE */
+div p {
+    color: red;
+}

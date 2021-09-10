@@ -1,0 +1,9 @@
+/* poner algo antes */
+div::before{
+    content: ":)" ;
+}
+
+/* poner algo despues */
+div::after{
+    content: ":(" ;
+}

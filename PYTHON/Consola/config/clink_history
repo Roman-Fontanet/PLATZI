@@ -1,0 +1,39 @@
+|CTAG_1618867381_483002093_5724_0
+|d ..
+CD..
+cd escritorio
+cd FUNDAMENTOS DE PROGRAMACION
+cd Nueva carpeta
+cd ..
+|s
+|d..
+cd PYTHON
+MKDIR CURSO
+|d curso
+touch ejemplo.txt
+ls
+|d..
+|d..
+mkdir 4/19/2021
+mkdir tarea
+cd tarea
+touch prueba1
+touch prueba2
+touch prueba1.txt
+touch prueba2.txt
+touch prueba3.txt
+|d..
+|d curso
+py con
+cd..
+cd curso
+py condicionales
+py condicionales.py
+PY
+|y
+|y
+python
+mkdir proyecto_ejemplo
+cd proyecto_ejemplo
+git init
+py

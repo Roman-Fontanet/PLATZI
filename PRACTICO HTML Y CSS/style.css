@@ -1,0 +1,170 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-size: 13px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+a{
+    text-decoration: none;
+    cursor: pointer;
+}
+
+header {
+    width: 100%;
+    height: 60px;
+}
+
+header nav {
+    display: flex;
+    justify-content: flex-end;
+}
+
+header nav .nav-right-section {
+    width: 250px;
+    height: auto;
+    display: flex;
+    list-style: none;
+    justify-content: center;
+    align-items: center;
+}
+
+nav .nav-right-section a {
+    margin-right: 10px;
+    color: black;
+}
+
+nav .nav-right-section .menu-icon{
+    background-image: url('https://static.thenounproject.com/png/756729-200.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    width: 25px;
+    height: 25px;
+
+}
+
+nav .nav-right-section img{
+    border-radius: 50%;
+    margin-left: 10px;
+}
+
+main {
+    margin-top: 150px;
+    text-align: center;
+}
+
+main .main-logo {
+    width: 530px;
+    margin: 0 auto;
+    margin-bottom: 35px;
+}
+
+main .main-logo img{
+    width: 300px;
+}
+
+main .main-input {
+    width: 530px;
+    margin: 0 auto;
+    margin-bottom: 35px;
+}
+
+main .main-input-container {
+    width: 525px;
+    border-radius: 100px;
+    border: 1px solid #dfe1e5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main .main-input input{
+    width: 450px;
+    height: 40px;
+    border: none;
+    outline: none;
+}
+
+main .main-input-container:hover {
+    box-shadow: 0 1px 6px 0 #20212447;
+    border-color: #dfe1e500;
+}
+
+main .main-input .search-icon {
+    background-image: url('https://w7.pngwing.com/pngs/648/874/png-transparent-magnifying-glass-computer-icons-magnifying-glass-glass-desktop-wallpaper-circle.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    width: 18px;
+    height: 18px;
+}
+
+main .main-input .micro-icon{
+    background-image: url('data:image/png;base64,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');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    width: 18px;
+    height: 18px;
+    cursor: pointer;
+}
+
+main .main-buttons {
+    width: 530px;
+    margin: 0 auto;
+}
+
+main .main-buttons div{
+    display: inline-block;
+}
+
+main .main-buttons button{
+    height: 36px;
+    background-color: #f2f2f2;
+    border: 0;
+    font-size: 14px;
+    color: #5f6368;
+    border-radius: 5px;
+    padding: 0 15px;
+    margin-right: 15px;
+}
+
+main .main-buttons button:hover {
+    border: 1px solid #c6c6c6;
+    box-shadow: 0 1px 1px #000001;
+    color: #222;
+}
+
+footer{
+    width: 100%;
+    height: 50px;
+    position: absolute;
+    bottom: 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    font-size: 13px;
+    background-color: #f2f2f2;
+    border-top: 1px solid #e4e4e4;
+}
+
+footer ul{
+    margin: 10px;
+    list-style: none;
+    display: flex;
+    padding-left: 0;
+}
+
+footer .footer-left {
+    justify-self: left;
+}
+
+footer .footer-right{
+    justify-self: right;
+}
+
+footer ul li a {
+    margin: 10px;
+    color: #5f6368;
+}

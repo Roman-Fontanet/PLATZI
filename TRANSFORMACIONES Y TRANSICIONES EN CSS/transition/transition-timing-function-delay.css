@@ -1,0 +1,45 @@
+.container:hover .circle{
+    transform: translateX(200px);
+}
+
+.circle{
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+}
+
+.one{
+    background: purple;
+    transition: transform 1s linear;
+    transition-delay: 0.5s;
+}
+
+.two{
+    background: blue;
+    transition: transform 1s ease;
+    transition-delay: 1s;
+}
+
+.three{
+    background: red;
+    transition: transform 1.5s ease-in;
+    transition-delay: 1.5s;
+}
+
+.four{
+    background: green;
+    transition: transform 2s ease-out;
+    transition-delay: 0.5s;
+}
+
+.five{
+    background: yellow;
+    transition: transform 1s ease-in-out;
+    transition-delay: 2s;
+}
+
+.six{
+    background: black;
+    transition: transform 1.3s cubic-bezier(.51,.72,.91,.26);
+    transition-delay: 0.5s;
+}

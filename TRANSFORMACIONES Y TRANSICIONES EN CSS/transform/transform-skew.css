@@ -1,0 +1,11 @@
+div{
+    width: 100px;
+    height: 100px;
+    background-color: aqua;
+    border-radius: 20%;
+}
+
+/* inclinar un elemento-----se usan grados con deg */
+div:hover{
+    transform: skew(20deg);
+}
